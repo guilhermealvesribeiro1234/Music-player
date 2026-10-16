@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="player">
+        <header>
+            <h1>♫ Music Player</h1>
+            <p>Sua música, seu momento.</p>
+        </header>
+
+        <section class="music-info">
+            <div class="cover" id="cover">♫</div>
+            <h2 id="title">Música 1</h2>
+            <p id="artist">Artista desconhecido</p>
+        </section>
+
+        <audio id="audio"></audio>
+
+        <section class="progress-area">
+            <input type="range" id="progress"
+                   value="0" min="0" max="100">
+            <div class="time">
+                <span id="current-time">0:00</span>
+                <span id="duration">0:00</span>
+            </div>
+        </section>
+
+        <section class="controls">
+            <button id="prev" aria-label="Música anterior">⏮</button>
+            <button id="play" class="play-btn"
+                    aria-label="Reproduzir">▶</button>
+            <button id="next" aria-label="Próxima música">⏭</button>
+        </section>
+
+        <section class="volume-area">
+            <label for="volume">🔊 Volume</label>
+            <input type="range" id="volume"
+                   min="0" max="1" step="0.01" value="0.7">
+        </section>
+
+        <section class="playlist">
+            <h3>Lista de músicas</h3>
+            <div id="song-list"></div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
